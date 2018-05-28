@@ -1,4 +1,4 @@
-package cn01.xyh.entity.Servlet;
+package cn01.xyh.Servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

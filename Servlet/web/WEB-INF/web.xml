@@ -9,7 +9,7 @@
         <!--Servlet的内部名称，自定义，尽量有意义-->
         <servlet-name>firstServlet</servlet-name>
         <!--Servlet类的全名: 包名 + 类名-->
-        <servlet-class>cn01.xyh.entity.Servlet.FirstServlet</servlet-class>
+        <servlet-class>cn01.xyh.Servlet.FirstServlet</servlet-class>
     </servlet>
     <!-- Servlet的映射配置-->
     <servlet-mapping>
