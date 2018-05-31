@@ -18,7 +18,9 @@
         <!--Servlet的映射路径，访问这个Servlet的路径-->
         <url-pattern>/firstServlet</url-pattern>
     </servlet-mapping>
+    <!-- Servlet的配置结束-->
 
+    <!--配置一个带有初始化参数的Servlet-->
     <servlet>
         <servlet-name>configDemo</servlet-name>
         <servlet-class>cn05.xyh.ServletConfig.ConfigDemo</servlet-class>
@@ -40,6 +42,7 @@
         <servlet-name>configDemo</servlet-name>
         <url-pattern>/configDemo</url-pattern>
     </servlet-mapping>
+    <!--一个带有初始化参数的Servlet配置结束-->
 
     <!--配置web应用参数-->
     <context-param>
@@ -54,4 +57,40 @@
         <param-name>CCC</param-name>
         <param-value>ccc</param-value>
     </context-param>
+    <!--web应用参数配置结束-->
+    <!--配置一个过滤器-->
+    <filter>
+        <filter-name>demo1</filter-name>
+        <filter-class>cn11.xyh.Filter.Demo01.Demo1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>demo1</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--过滤器配置结束-->
+
+    <!--配置一个带初始化参数的过滤器-->
+    <filter>
+        <filter-name>demo3</filter-name>
+        <filter-class>cn11.xyh.Filter.Demo01.Demo3</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>path</param-name>
+            <param-value>c:/...</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>demo3</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--带初始化参数的过滤器配置结束-->
+
+    <!--监听request对象创建、销毁-->
+    <listener>
+        <listener-class>cn12.xyh.Listener.MyRequestListener</listener-class>
+    </listener>
+    <!--监听request对象创建、销毁结束-->
 </web-app>
