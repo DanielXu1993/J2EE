@@ -5,15 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>J2EE</groupId>
-    <artifactId>JSP</artifactId>
+    <artifactId>struts2_02</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!--jstl表达式-->
         <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.5.16</version>
         </dependency>
     </dependencies>
 </project>

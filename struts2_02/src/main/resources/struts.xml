@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--总配置文件：引入其他所有配置文件-->
+    <include file="struts.xml"></include>
+    <include file="data.xml"></include>
+    <include file="type.xml"></include>
+    <include file="upload.xml"></include>
+    <include file="interceptor.xml"></include>
+    <include file="ognl.xml"></include>
+
+
+    <!--修改常量值-->
+    <constant name="struts.action.extension" value="action,do,"></constant>
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="config" extends="struts-default" abstract="false">
+
+        <!--全局跳转配置
+            <global-results>
+                <result name="success">/index.jsp</result>
+            </global-results>
+        -->
+        <action name="login" class="cn.xyh.a_config.UserAction" method="login">
+            <result name="success">/index.jsp</result>
+        </action>
+
+        <action name="login3" class="cn.xyh.a_config.UserAction3" method="login">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="register" class="cn.xyh.a_config.UserAction3" method="register">
+            <result name="success">/index.jsp</result>
+        </action>
+
+    </package>
+</struts>
