@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.xyh.c_many2manyMapping">
+
+    <class name="Developer" table="t_developer">
+        <id name="d_id">
+            <generator class="native"></generator>
+        </id>
+        <property name="d_name"></property>
+        <set name="projects" table="t_relation">
+            <key column="did"></key>
+            <many-to-many column="proId" class="Project"></many-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>

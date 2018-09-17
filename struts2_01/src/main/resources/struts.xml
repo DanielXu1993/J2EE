@@ -26,5 +26,5 @@
         </action>
     </package>
     <!--引入其他struts配置文件-->
-    <include file="cn01/xyh/firstStruts/hello.xml"></include>
+    <include file="hello.xml"></include>
 </struts>

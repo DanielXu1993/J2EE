@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--映射文件：将一个实体类和数据库中的表进行映射，从而通过操作这个实体类来操作数据库中的表-->
+
+<!--
+    package 要映射的实体类所在的包，如果不指定，该标签下所有的类必须要提供全名
+-->
+<hibernate-mapping package="cn.xyh.a_hello">
+
+    <!--class：要映射的实体类，通常一个文件与一个class对应
+            name: 要映射的实体类名
+            table:映射的数据库中的表名。如果没有指定则默认与name相同
+    -->
+    <class name="Employee" table="employee">
+        <!--主键映射-->
+        <id name="empId" column="id">
+            <!--
+                主键的生成策略：
+                    identity    自增长：mysql，db2
+                    sequence    自增长：Oracle
+                    native      自增长：会根据数据库自动选择identity或sequence
+                    increment   自增长，会有并发访问问题
+                    assign      手动设置主键的值
+                    uuid        指定主键为随机生成的唯一值
+                    foreign     外键
+            -->
+            <generator class="native"></generator>
+        </id>
+
+        <!--
+            普通字段的映射
+            property
+                name 要映射的实体类中的属性名
+                column 对象属性对应的数据库中表的字段名，不写默认与name相同
+                length 指定表中字段的长度，默认为255
+                type 指定表中字段的类型，不写自动匹配属性的类型，有两种指定方式：
+                    java型：写类的全名，推荐
+                    hibernate型：直接写类型，小写
+        -->
+        <property name="empName" column="empName" type="java.lang.String"></property>
+        <property name="workDate" column="workDate" type="date"></property>
+    </class>
+
+</hibernate-mapping>

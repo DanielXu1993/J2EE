@@ -5,11 +5,11 @@
 <struts>
     <package name="type" extends="struts-default" abstract="false">
 
-        <action name="user_register1" class="cn.xyh.c_type.UserAction1" method="register">
+        <action name="user_register1" class="cn.xyh.c_type.UserAction1" method="register1">
             <result name="success">/index.jsp</result>
         </action>
 
-        <action name="user_register2" class="cn.xyh.c_type.UserAction2" method="register">
+        <action name="user_register2" class="cn.xyh.c_type.UserAction2" method="register2">
             <result name="success">/index.jsp</result>
         </action>
     </package>
