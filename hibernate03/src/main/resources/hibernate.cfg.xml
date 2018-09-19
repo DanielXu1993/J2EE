@@ -18,14 +18,7 @@
         <property name="hibernate.format_sql">true</property>
         <!--2.3 自动建表，update：如果表不存在就创建表，否则不创建-->
         <property name="hibernate.hbm2ddl.auto">update</property>
-
-        <!--3. 加载所有的映射-->
-        <mapping resource="User.hbm.xml"/>
-        <mapping resource="Dept.hbm.xml"/>
-        <mapping resource="Employee.hbm.xml"/>
-        <mapping resource="Developer.hbm.xml"/>
-        <mapping resource="Project.hbm.xml"/>
-        <mapping resource="Customer.hbm.xml"/>
-        <mapping resource="IdCard.hbm.xml"/>
+        <mapping resource="Dept.hbm.xml"></mapping>
+        <mapping resource="Employee.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -22,7 +22,7 @@ public class App {
         customer.setName("Jack");
 
         IdCard card = new IdCard();
-        card.setCardNum("456321321531xxxx");
+        card.setCardNum("456321321532xxxx");
         card.setIssuePlace("安徽省");
         customer.setIdCard(card);
 
