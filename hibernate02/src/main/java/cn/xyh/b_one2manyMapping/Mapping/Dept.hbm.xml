@@ -5,23 +5,23 @@
 
 <hibernate-mapping package="cn.xyh.b_one2manyMapping">
 
-    <class name="Dept" table="t_dept">
-        <id name="deptId">
+    <class userName="Dept" table="t_dept">
+        <id userName="deptId">
             <generator class="native"></generator>
         </id>
-        <property name="deptName"></property>
+        <property userName="deptName"></property>
 
         <!--
             一对多关系映射：一个部门对应多个员工
             set     class对象中的set集合
-                name    set集合的属性名
+                userName    set集合的属性名
                 table   该集合所对应的数据库中的表名(此处可以不写，可以根据下面标签中的class推断)
                 key     set集合中的元素所对应的表中的外键
                     column  set集合中的元素对应的表中的外键，默认与class中的主键关联
                 one-to-many class与该集合中的元素是一对多关系映射
                     class   集合中的元素的类型
         -->
-        <set name="emps" table="t_employee">
+        <set userName="emps" table="t_employee">
             <key column="dept_id"></key>
             <one-to-many class="Employee"></one-to-many>
         </set>

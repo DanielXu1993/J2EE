@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--##############对象属性赋值#######################-->
+    <!--
+        使用p命名空间为对象的属性注入值
+        原理也是通过set方法注入,因此仍然要提供对应的set方法
+    -->
+    <bean id="userDao" class="cn.UserDao" scope="singleton"></bean>
+    <bean id="userService" class="cn.UserService" p:userDao-ref="userDao" scope="singleton"></bean>
+    <bean id="userAction" class="cn.UserAction" p:userService-ref="userService"
+          scope="prototype"></bean>
+</beans>

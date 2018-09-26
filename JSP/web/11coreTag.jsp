@@ -28,8 +28,8 @@
 </div>
 <div>
     <%--set标签：保存数据(保存到域中，默认保存到page域中)--%>
-    <c:set var="name" value="rose" scope="request"></c:set>
-    ${requestScope.name}
+    <c:set var="userName" value="rose" scope="request"></c:set>
+    ${requestScope.userName}
     <%--set标签--%>
     <hr/>
     <%--out标签：从域中获取数据,当value的值为null时显示默认值--%>
@@ -37,7 +37,7 @@
         String msg = null;
         pageContext.setAttribute("msg", msg);
     %>
-    <c:out value="${name}"></c:out><br/>
+    <c:out value="${userName}"></c:out><br/>
     <c:out value="${msg}" default="默认值"></c:out>
     <%--out标签--%>
     <hr/>
@@ -86,12 +86,12 @@
         var="":每个元素的名称
     --%>
     <c:forEach items="${students}" step="1" varStatus="varSta" var="student">
-        序号：${varSta.count} -- 姓名：${student.name} -- 年龄：${student.age}<br/>
+        序号：${varSta.count} -- 姓名：${student.userName} -- 年龄：${student.age}<br/>
     </c:forEach>
     <hr/>
 
     <c:forEach items="${map}" var="entry">
-        编号：${entry.key} -- 姓名：${entry.value.name} -- 年龄：${entry.value.age}<br/>
+        编号：${entry.key} -- 姓名：${entry.value.userName} -- 年龄：${entry.value.age}<br/>
     </c:forEach>
     <%--forEach标签--%>
     <hr/>

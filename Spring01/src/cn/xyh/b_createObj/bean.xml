@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--###############对象创建#########################-->
+    <!--1. 默认无参构造器-->
+    <bean id="defaultUser" class="cn.User" scope="prototype"></bean>
+    <!--2.1 调用带参构造器1-->
+    <bean id="withParaUser1" class="cn.User" scope="prototype">
+        <!--参数顺序与实体类中的顺序要对应-->
+        <constructor-arg userName="id" value="100"></constructor-arg>
+        <constructor-arg userName="userName" value="Jack"></constructor-arg>
+    </bean>
+
+    <!--2.2 调用带参构造器2-->
+    <!--创建一个字符创对象"Rose"-->
+    <bean id="str" class="java.lang.String" scope="prototype">
+        <constructor-arg value="Rose"></constructor-arg>
+    </bean>
+    <bean id="withParaUser2" class="cn.User" scope="prototype">
+        <!--
+                index: 索引顺序与实体类中的实例变量顺序一致,从0开始.添加索引后参数循序不作要求.
+                value: 具体的值使用该属性赋值
+                ref:   引用一个已经存在的bean
+                type:  该参数对应的实例变量的类型,基本数据类型和String类型可以省略.
+        -->
+        <constructor-arg userName="id" index="0" value="200"></constructor-arg>
+        <constructor-arg userName="userName" type="java.lang.String" ref="str"></constructor-arg>
+    </bean>
+
+    <!--3.1 通过工厂类的实例方法创建对象-->
+    <!--创建工厂类对象-->
+    <bean id="factory" class="cn.ObjectFactory" lazy-init="true"></bean>
+    <!--
+        根据工厂类的实例方法创建对象:
+        factory-bean:引用工厂类的bean
+        factory-method:指定工厂类中创建对象的实例方法
+    -->
+    <bean id="instanceObj" class="cn.User" factory-bean="factory" factory-method="getInstance"
+          scope="prototype"></bean>
+    <!--3.2 通过工厂类的静态方法创建对象-->
+    <!--
+        创建的对象由工厂类和工厂类的静态方法决定.
+        class中写工厂类的类型<工厂类不需要实例化,因此不需要配置bean>
+        factory-method指定静态方法.
+    -->
+    <bean id="staticObj" class="cn.ObjectFactory" factory-method="getStaticInstance"
+          scope="prototype"></bean>
+</beans>

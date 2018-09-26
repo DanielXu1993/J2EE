@@ -8,7 +8,7 @@
 <div>
     <br/>1.取根元素的值<br/>
     <s:property value="user.id"/><br/>
-    <s:property value="user.name"/><br/>
+    <s:property value="user.userName"/><br/>
     <s:property value="user.address"/><br/>
     <s:property value="user.address.city"/><br/>
     <s:property value="user.address.province"/><br/>

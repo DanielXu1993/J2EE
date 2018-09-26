@@ -11,10 +11,10 @@
         语法： ${变量或表达式}
     --%>
     <%
-        pageContext.setAttribute("name", "rose");
+        pageContext.setAttribute("userName", "rose");
     %>
-    ${name}<br/><%--从四个域中从小到大搜索--%>
-    EL表达式：${pageScope.name}<%--从指定域中获取数据--%>
+    ${userName}<br/><%--从四个域中从小到大搜索--%>
+    EL表达式：${pageScope.userName}<%--从指定域中获取数据--%>
 </div>
 </body>
 </html>

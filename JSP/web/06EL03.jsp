@@ -17,7 +17,7 @@
         list.add(new Student("lucy", 38));
         pageContext.setAttribute("students", list);
     %>
-    ${students[0].name} -- ${students.get(0).age}
+    ${students[0].userName} -- ${students.get(0).age}
 </div>
 <hr/>
 <div>
@@ -28,9 +28,9 @@
         map.put("102", new Student("lucy", 38));
         pageContext.setAttribute("map", map);
     %>
-    ${map["100"].name} -- ${map["100"].age}<br/>
-    ${map.get("101").name} -- ${map.get("101").age}<br/>
-    ${map["102"].name} -- ${map["102"].age}<br/>
+    ${map["100"].userName} -- ${map["100"].age}<br/>
+    ${map.get("101").userName} -- ${map.get("101").age}<br/>
+    ${map["102"].userName} -- ${map["102"].age}<br/>
 </div>
 </body>
 </html>

@@ -12,7 +12,7 @@
     %>
 
     <%--等价于((Student) pageContext.findAttribute("student")).getName()--%>
-    ${student.name}<%--点等价于调用对象的getXXX()方法--%>
+    ${student.userName}<%--点等价于调用对象的getXXX()方法--%>
 </div>
 </body>
 </html>

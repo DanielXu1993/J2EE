@@ -6,7 +6,7 @@
 <body>
 <div>
     <jsp:include page="/header.jsp"></jsp:include>
-    <%--<jsp:param name="" value=""></jsp:param>--%>
+    <%--<jsp:param userName="" value=""></jsp:param>--%>
     <%--
         该标签与include指令的区别：
             标签(动态包含)：

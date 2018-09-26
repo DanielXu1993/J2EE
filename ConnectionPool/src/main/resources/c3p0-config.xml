@@ -1,19 +1,19 @@
 <c3p0-config>
     <default-config>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/itanyoa</property>
-        <property name="user">root</property>
-        <property name="password">root</property>
-        <property name="initialPoolSize">3</property>
-        <property name="maxPoolSize">6</property>
+        <property userName="jdbcUrl">jdbc:mysql://localhost:3306/itanyoa</property>
+        <property userName="user">root</property>
+        <property userName="password">root</property>
+        <property userName="initialPoolSize">3</property>
+        <property userName="maxPoolSize">6</property>
     </default-config>
 
     <!-- 可以配置多个数据库
-    <named-config name="oracle_config">
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/itanyoa</property>
-        <property name="user">root</property>
-        <property name="password">root</property>
-        <property name="initialPoolSize">3</property>
-        <property name="maxPoolSize">6</property>
+    <named-config userName="oracle_config">
+        <property userName="jdbcUrl">jdbc:mysql://localhost:3306/itanyoa</property>
+        <property userName="user">root</property>
+        <property userName="password">root</property>
+        <property userName="initialPoolSize">3</property>
+        <property userName="maxPoolSize">6</property>
     </named-config>
     -->
 

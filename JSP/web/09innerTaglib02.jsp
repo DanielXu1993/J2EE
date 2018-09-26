@@ -7,8 +7,8 @@
 <div>
     <%--jsp:param标签用于转发时的参数传递--%>
     <jsp:forward page="/index.jsp">
-        <jsp:param name="name" value="jack"/>
-        <jsp:param name="password" value="123456"/>
+        <jsp:param userName="userName" value="jack"/>
+        <jsp:param userName="password" value="123456"/>
     </jsp:forward>
 </div>
 </body>

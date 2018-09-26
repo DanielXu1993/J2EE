@@ -14,17 +14,17 @@
 <div>
     <%--EL表达式的判空操作--%>
     <%
-        //String name = "eric";
-        //String name = null;
-        String name = "";
-        pageContext.setAttribute("name", name);
+        //String userName = "eric";
+        //String userName = null;
+        String userName = "";
+        pageContext.setAttribute("userName", userName);
     %>
-    判断null: ${name == null}<br/>
-    判断"": ${name == ""}<br/>
+    判断null: ${userName == null}<br/>
+    判断"": ${userName == ""}<br/>
 
 
-    判空：${name == null || name == ""}<br/>
-    判空：${empty name}<br/>
+    判空：${userName == null || userName == ""}<br/>
+    判空：${empty userName}<br/>
 </div>
 </body>
 </html>

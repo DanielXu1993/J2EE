@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>
-    <%=request.getParameter("name")%>
+    <%=request.getParameter("userName")%>
     <%=request.getParameter("password")%>
 </div>
 </body>

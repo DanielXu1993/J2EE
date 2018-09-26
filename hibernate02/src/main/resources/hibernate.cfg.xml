@@ -4,20 +4,20 @@
 <hibernate-configuration>
     <session-factory>
         <!--1. 数据库连接配置-->
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql:///hib_demo</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        <property userName="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property userName="hibernate.connection.url">jdbc:mysql:///hib_demo</property>
+        <property userName="hibernate.connection.username">root</property>
+        <property userName="hibernate.connection.password">root</property>
         <!--数据库方言配置，运行时会根据不同的方言生成符合语法的sql语句-->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property userName="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!--2. 其他相关配置-->
         <!--2.1 显示运行时执行的sql语句-->
-        <property name="hibernate.show_sql">true</property>
+        <property userName="hibernate.show_sql">true</property>
         <!--2.2 格式化sql语句-->
-        <property name="hibernate.format_sql">true</property>
+        <property userName="hibernate.format_sql">true</property>
         <!--2.3 自动建表，update：如果表不存在就创建表，否则不创建-->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property userName="hibernate.hbm2ddl.auto">update</property>
 
         <!--3. 加载所有的映射-->
         <mapping resource="User.hbm.xml"/>

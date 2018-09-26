@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.通过构造函数为属性注入值-->
+    <bean id="constructorInjection" class="cn.User" scope="prototype">
+        <constructor-arg value="100"></constructor-arg>
+        <constructor-arg value="construction injection"></constructor-arg>
+    </bean>
+    <!--2. 通过set方法为熟悉注入值(对应的属性必须提供set方法)-->
+    <bean id="setInjection" class="cn.User" scope="prototype">
+        <property userName="id" value="200"></property>
+        <property userName="userName" value="set injection"></property>
+    </bean>
+</beans>

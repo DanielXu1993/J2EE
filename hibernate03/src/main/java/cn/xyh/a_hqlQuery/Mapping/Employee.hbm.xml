@@ -5,13 +5,13 @@
 
 <hibernate-mapping package="cn.xyh.a_hqlQuery">
 
-    <class name="Employee" table="t_employee">
-        <id name="empId">
+    <class userName="Employee" table="t_employee">
+        <id userName="empId">
             <generator class="native"></generator>
         </id>
-        <property name="empName"></property>
-        <property name="salary"></property>
-        <many-to-one name="dept" class="Dept" column="dept_id"></many-to-one>
+        <property userName="empName"></property>
+        <property userName="salary"></property>
+        <many-to-one userName="dept" class="Dept" column="dept_id"></many-to-one>
     </class>
 
 </hibernate-mapping>

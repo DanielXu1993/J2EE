@@ -9,13 +9,13 @@
     <br/>一、测试List迭代<br/>
     <s:iterator var="user" value="#request.list">
         <s:property value="#user.id"/>
-        <s:property value="#user.name"/><br/>
+        <s:property value="#user.userName"/><br/>
     </s:iterator>
 
     <br/>二、测试Map迭代<br/>
     <s:iterator var="entry" value="#request.map">
         <s:property value="#entry.key"/> ==
-        <s:property value="#entry.value.name"/><br/>
+        <s:property value="#entry.value.userName"/><br/>
     </s:iterator>
 </div>
 </body>
