@@ -5,12 +5,12 @@
 
 <hibernate-mapping package="cn.xyh.b_one2manyMapping">
 
-    <class userName="Employee" table="t_employee">
-        <id userName="empId">
+    <class name="Employee" table="t_employee">
+        <id name="empId">
             <generator class="native"></generator>
         </id>
-        <property userName="empName"></property>
-        <property userName="salary"></property>
+        <property name="empName"></property>
+        <property name="salary"></property>
 
         <!--
             多对一关系映射：多个员工对应一个部门
@@ -19,7 +19,7 @@
             column  该属性所代表的数据库中的表中的外键字段，默认与class中的主键引用
 
         -->
-        <many-to-one userName="dept" class="Dept" column="dept_id"></many-to-one>
+        <many-to-one name="dept" class="Dept" column="dept_id"></many-to-one>
     </class>
 
 </hibernate-mapping>

@@ -3,31 +3,31 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package userName="interceptor" extends="struts-default" abstract="false">
+    <package name="interceptor" extends="struts-default" abstract="false">
 
         <!--拦截器配置-->
         <interceptors>
             <!--配置用户自定义的拦截器-->
-            <interceptor userName="helloInterceptor" class="cn.xyh.e_interceptor.HelloInterceptor"></interceptor>
+            <interceptor name="helloInterceptor" class="cn.xyh.e_interceptor.HelloInterceptor"></interceptor>
             <!--自定义一个栈：引用默认栈以及自定义的拦截器-->
-            <interceptor-stack userName="helloStack">
+            <interceptor-stack name="helloStack">
                 <!--引用默认栈，必须在第一行-->
-                <interceptor-ref userName="defaultStack"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
                 <!--引用自定义拦截器-->
-                <interceptor-ref userName="helloInterceptor"></interceptor-ref>
+                <interceptor-ref name="helloInterceptor"></interceptor-ref>
             </interceptor-stack>
         </interceptors>
 
         <!--方式一：修改默认执行的拦截器栈为自定义拦截器栈（该package下所有的action都会执行自定义拦截器栈）-->
-        <default-interceptor-ref userName="helloStack"></default-interceptor-ref>
+        <default-interceptor-ref name="helloStack"></default-interceptor-ref>
 
         <!--配置Action-->
-        <action userName="helloInterceptor" class="cn.xyh.e_interceptor.HelloAction">
+        <action name="helloInterceptor" class="cn.xyh.e_interceptor.HelloAction">
             <!--方式二：
             只有该action才会执行自定义拦截器栈，其他action执行默认拦截器栈
-            <interceptor-ref userName="helloStack"></interceptor-ref>
+            <interceptor-ref name="helloStack"></interceptor-ref>
             -->
-            <result userName="success">/index.jsp</result>
+            <result name="success">/index.jsp</result>
         </action>
 
     </package>

@@ -5,12 +5,12 @@
 
 <hibernate-mapping package="cn.xyh.c_many2manyMapping">
 
-    <class userName="Developer" table="t_developer">
-        <id userName="d_id">
+    <class name="Developer" table="t_developer">
+        <id name="d_id">
             <generator class="native"></generator>
         </id>
-        <property userName="d_name"></property>
-        <set userName="projects" table="t_relation">
+        <property name="d_name"></property>
+        <set name="projects" table="t_relation">
             <key column="did"></key>
             <many-to-many column="proId" class="Project"></many-to-many>
         </set>

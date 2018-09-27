@@ -6,7 +6,7 @@
 <body>
 <div>
     <jsp:include page="/header.jsp"></jsp:include>
-    <%--<jsp:param userName="" value=""></jsp:param>--%>
+    <%--<jsp:param name="" value=""></jsp:param>--%>
     <%--
         该标签与include指令的区别：
             标签(动态包含)：
@@ -14,7 +14,7 @@
                 包含页面可以向被包含页面传递参数
             指令(静态包含)：
                 现将两个页面合并再翻译成一个java源文件
-                包含页面不可以向被包含页面
+                包含页面不可以向被包含页面传递参数
     --%>
 </div>
 主页的内容

@@ -14,9 +14,9 @@
             userName: 要映射的实体类名
             table:映射的数据库中的表名。如果没有指定则默认与name相同
     -->
-    <class userName="Employee" table="employee">
+    <class name="Employee" table="employee">
         <!--主键映射-->
-        <id userName="empId" column="id">
+        <id name="empId" column="id">
             <!--
                 主键的生成策略：
                     identity    自增长：mysql，db2
@@ -40,8 +40,8 @@
                     java型：写类的全名，推荐
                     hibernate型：直接写类型，小写
         -->
-        <property userName="empName" column="empName" type="java.lang.String"></property>
-        <property userName="workDate" column="workDate" type="date"></property>
+        <property name="empName" column="empName" type="java.lang.String"></property>
+        <property name="workDate" column="workDate" type="date"></property>
     </class>
 
 </hibernate-mapping>

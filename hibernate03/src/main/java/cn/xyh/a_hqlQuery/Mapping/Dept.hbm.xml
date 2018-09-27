@@ -5,18 +5,18 @@
 
 <hibernate-mapping package="cn.xyh.a_hqlQuery">
 
-    <class userName="Dept" table="t_dept">
-        <id userName="deptId">
+    <class name="Dept" table="t_dept">
+        <id name="deptId">
             <generator class="native"></generator>
         </id>
-        <property userName="deptName"></property>
-        <set userName="emps" table="t_employee">
+        <property name="deptName"></property>
+        <set name="emps" table="t_employee">
             <key column="dept_id"></key>
             <one-to-many class="Employee"></one-to-many>
         </set>
     </class>
 
-    <query userName="getAllDept">
+    <query name="getAllDept">
         <!--取消转义-->
         <![CDATA[
             from Dept d where deptId < ?1

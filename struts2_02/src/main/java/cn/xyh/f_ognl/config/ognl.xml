@@ -3,12 +3,12 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package userName="ognl" extends="struts-default" abstract="false">
-        <action userName="valueStack" class="cn.xyh.f_ognl.OgnlDemo2" method="execute">
-            <result userName="success">/valueStack.jsp</result>
+    <package name="ognl" extends="struts-default" abstract="false">
+        <action name="valueStack" class="cn.xyh.f_ognl.OgnlDemo2" method="execute">
+            <result name="success">/valueStack.jsp</result>
         </action>
-        <action userName="ognl" class="cn.xyh.f_ognl.OgnlDemo3" method="execute">
-            <result userName="success">/ognl.jsp</result>
+        <action name="ognl" class="cn.xyh.f_ognl.OgnlDemo3" method="execute">
+            <result name="success">/ognl.jsp</result>
         </action>
     </package>
 </struts>

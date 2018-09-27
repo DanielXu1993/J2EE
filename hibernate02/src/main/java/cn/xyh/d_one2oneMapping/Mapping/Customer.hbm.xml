@@ -5,16 +5,16 @@
 
 <hibernate-mapping package="cn.xyh.d_one2oneMapping">
 
-    <class userName="Customer" table="t_customer">
-        <id userName="c_id">
+    <class name="Customer" table="t_customer">
+        <id name="c_id">
             <generator class="native"></generator>
         </id>
-        <property userName="userName"></property>
+        <property name="userName"></property>
         <!--
             外键列在t_customer表中,使用many-to-one映射,one-to-one是多对多的一种特殊形式
             unique="true"可以添加外键列的唯一约束
         -->
-        <many-to-one userName="idCard" column="idcard" class="IdCard" unique="true" cascade="all"></many-to-one>
+        <many-to-one name="idCard" column="idcard" class="IdCard" unique="true" cascade="all"></many-to-one>
     </class>
 
 </hibernate-mapping>

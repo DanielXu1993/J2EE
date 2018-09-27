@@ -5,11 +5,11 @@
 
 <hibernate-mapping package="cn.xyh.b_one2manyMapping">
 
-    <class userName="Dept" table="t_dept">
-        <id userName="deptId">
+    <class name="Dept" table="t_dept">
+        <id name="deptId">
             <generator class="native"></generator>
         </id>
-        <property userName="deptName"></property>
+        <property name="deptName"></property>
 
         <!--
             一对多关系映射：一个部门对应多个员工
@@ -21,7 +21,7 @@
                 one-to-many class与该集合中的元素是一对多关系映射
                     class   集合中的元素的类型
         -->
-        <set userName="emps" table="t_employee">
+        <set name="emps" table="t_employee">
             <key column="dept_id"></key>
             <one-to-many class="Employee"></one-to-many>
         </set>

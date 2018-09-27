@@ -3,22 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--dao instance-->
-    <bean id="userDao" class="cn.UserDao" scope="prototype"></bean>
+    <bean id="userDao" class="cn.xyh.d_setInjection_case.UserDao" scope="prototype"></bean>
     <!--service instance-->
-    <bean id="userService" class="cn.UserService" scope="prototype">
-        <property userName="userDao" ref="userDao"></property>
+    <bean id="userService" class="cn.xyh.d_setInjection_case.UserService" scope="prototype">
+        <property name="userDao" ref="userDao"></property>
     </bean>
     <!--action instance-->
-    <bean id="userAction" class="cn.UserAction" scope="singleton">
-        <property userName="userService" ref="userService"></property>
+    <bean id="userAction" class="cn.xyh.d_setInjection_case.UserAction" scope="singleton">
+        <property name="userService" ref="userService"></property>
     </bean>
 
     <!--内部bean写法,与上面功能相同但不利于维护,不推荐-->
-    <bean id="userActionInner" class="cn.UserAction" scope="singleton">
-        <property userName="userService">
-            <bean class="cn.UserService">
-                <property userName="userDao">
-                    <bean class="cn.UserDao"></bean>
+    <bean id="userActionInner" class="cn.xyh.d_setInjection_case.UserAction" scope="singleton">
+        <property name="userService">
+            <bean class="cn.xyh.d_setInjection_case.UserService">
+                <property name="userDao">
+                    <bean class="cn.xyh.d_setInjection_case.UserDao"></bean>
                 </property>
             </bean>
         </property>

@@ -3,14 +3,14 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package userName="type" extends="struts-default" abstract="false">
+    <package name="type" extends="struts-default" abstract="false">
 
-        <action userName="user_register1" class="cn.xyh.c_type.UserAction1" method="register1">
-            <result userName="success">/index.jsp</result>
+        <action name="user_register1" class="cn.xyh.c_type.UserAction1" method="register1">
+            <result name="success">/index.jsp</result>
         </action>
 
-        <action userName="user_register2" class="cn.xyh.c_type.UserAction2" method="register2">
-            <result userName="success">/index.jsp</result>
+        <action name="user_register2" class="cn.xyh.c_type.UserAction2" method="register2">
+            <result name="success">/index.jsp</result>
         </action>
     </package>
 </struts>

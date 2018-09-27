@@ -5,16 +5,16 @@
 
 <hibernate-mapping package="cn.xyh.d_one2oneMapping">
 
-    <class userName="IdCard" table="t_idCard">
-        <id userName="cardNum">
+    <class name="IdCard" table="t_idCard">
+        <id name="cardNum">
             <generator class="assigned"></generator>
         </id>
-        <property userName="issuePlace"></property>
+        <property name="issuePlace"></property>
 
         <!--
             外键列不在t_idCard表中,使用one-to-one映射
         -->
-        <one-to-one userName="customer" class="IdCard"></one-to-one>
+        <one-to-one name="customer" class="IdCard"></one-to-one>
 
     </class>
 

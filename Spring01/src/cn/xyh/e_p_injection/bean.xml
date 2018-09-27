@@ -7,8 +7,8 @@
         使用p命名空间为对象的属性注入值
         原理也是通过set方法注入,因此仍然要提供对应的set方法
     -->
-    <bean id="userDao" class="cn.UserDao" scope="singleton"></bean>
-    <bean id="userService" class="cn.UserService" p:userDao-ref="userDao" scope="singleton"></bean>
-    <bean id="userAction" class="cn.UserAction" p:userService-ref="userService"
+    <bean id="userDao" class="cn.xyh.e_p_injection.UserDao" scope="singleton"></bean>
+    <bean id="userService" class="cn.xyh.e_p_injection.UserService" p:userDao-ref="userDao" scope="singleton"></bean>
+    <bean id="userAction" class="cn.xyh.e_p_injection.UserAction" p:userService-ref="userService"
           scope="prototype"></bean>
 </beans>

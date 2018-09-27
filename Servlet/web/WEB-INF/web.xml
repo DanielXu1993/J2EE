@@ -7,14 +7,14 @@
     <!-- Servlet的配置-->
     <servlet>
         <!--Servlet的内部名称，自定义，尽量有意义-->
-        <servlet-userName>firstServlet</servlet-userName>
+        <servlet-name>firstServlet</servlet-name>
         <!--Servlet类的全名: 包名 + 类名-->
         <servlet-class>cn01.xyh.Servlet.FirstServlet</servlet-class>
     </servlet>
     <!-- Servlet的映射配置-->
     <servlet-mapping>
         <!--Servlet的内部名称，一定要和上面的内部名称保持一致-->
-        <servlet-userName>firstServlet</servlet-userName>
+        <servlet-name>firstServlet</servlet-name>
         <!--Servlet的映射路径，访问这个Servlet的路径-->
         <url-pattern>/firstServlet</url-pattern>
     </servlet-mapping>
@@ -22,68 +22,68 @@
 
     <!--配置一个带有初始化参数的Servlet-->
     <servlet>
-        <servlet-userName>configDemo</servlet-userName>
+        <servlet-name>configDemo</servlet-name>
         <servlet-class>cn05.xyh.ServletConfig.ConfigDemo</servlet-class>
         <!--配置servlet初始化参数,这些参数会在加载web应用时封装到ServletConfig对象中-->
         <init-param>
-            <param-userName>path</param-userName>
+            <param-name>path</param-name>
             <param-value>e:/a.txt</param-value>
         </init-param>
         <init-param>
-            <param-userName>AAA</param-userName>
+            <param-name>AAA</param-name>
             <param-value>bbb</param-value>
         </init-param>
         <init-param>
-            <param-userName>BBB</param-userName>
+            <param-name>BBB</param-name>
             <param-value>bbb</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-userName>configDemo</servlet-userName>
+        <servlet-name>configDemo</servlet-name>
         <url-pattern>/configDemo</url-pattern>
     </servlet-mapping>
     <!--一个带有初始化参数的Servlet配置结束-->
 
     <!--配置web应用参数-->
     <context-param>
-        <param-userName>AAA</param-userName>
+        <param-name>AAA</param-name>
         <param-value>aaa</param-value>
     </context-param>
     <context-param>
-        <param-userName>BBB</param-userName>
+        <param-name>BBB</param-name>
         <param-value>bbb</param-value>
     </context-param>
     <context-param>
-        <param-userName>CCC</param-userName>
+        <param-name>CCC</param-name>
         <param-value>ccc</param-value>
     </context-param>
     <!--web应用参数配置结束-->
     <!--配置一个过滤器-->
     <filter>
-        <filter-userName>demo1</filter-userName>
+        <filter-name>demo1</filter-name>
         <filter-class>cn11.xyh.Filter.Demo01.Demo1</filter-class>
     </filter>
     <filter-mapping>
-        <filter-userName>demo1</filter-userName>
+        <filter-name>demo1</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <!--过滤器配置结束-->
 
     <!--配置一个带初始化参数的过滤器-->
     <filter>
-        <filter-userName>demo3</filter-userName>
+        <filter-name>demo3</filter-name>
         <filter-class>cn11.xyh.Filter.Demo01.Demo3</filter-class>
         <init-param>
-            <param-userName>encoding</param-userName>
+            <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
         <init-param>
-            <param-userName>path</param-userName>
+            <param-name>path</param-name>
             <param-value>c:/...</param-value>
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-userName>demo3</filter-userName>
+        <filter-name>demo3</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <!--带初始化参数的过滤器配置结束-->

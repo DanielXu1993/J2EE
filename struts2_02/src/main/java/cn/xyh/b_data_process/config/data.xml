@@ -3,14 +3,14 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package userName="data" extends="struts-default" abstract="false">
+    <package name="data" extends="struts-default" abstract="false">
 
         <!--全局配置-->
         <global-results>
-            <result userName="success">/data.jsp</result>
+            <result name="success">/data.jsp</result>
         </global-results>
 
-        <action userName="data" class="cn.xyh.b_data_process.DataAction"></action>
+        <action name="data" class="cn.xyh.b_data_process.DataAction"></action>
 
     </package>
 </struts>
