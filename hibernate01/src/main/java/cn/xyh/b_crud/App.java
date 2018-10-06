@@ -18,7 +18,7 @@ public class App {
     @Test
     public void testUpdate() {
         Employee emp = new Employee("赵六", new Date());
-        emp.setEmpId(6);
+        emp.setEmpId(1);
         dao.update(emp);
     }
 

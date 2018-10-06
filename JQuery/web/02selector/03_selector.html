@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+</ul>
+<input type="checkbox" checked/>
+<input type="checkbox" checked/>
+<input type="checkbox"/>
+<table border="1">
+    <tr>
+        <td>line1</td>
+    </tr>
+    <tr>
+        <td>line2</td>
+    </tr>
+    <tr>
+        <td>line3</td>
+    </tr>
+</table>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<p>p</p>
+<script type="text/javascript">
+    //1)查找UL中第一个LI元素的内容
+    /**
+     *html()只能用于html和jsp页面,不能用在xml中
+     * text()既能用于html和jsp页面,也能用在xml中
+     * html()强调的是标签中的标签内容,即内容中包含子标签的格式
+     * test()强调的是标签中的文本内容,不会显示子标签的格式.
+     */
+    $("ul li:first").text(); // "list item 1"
+    //2)查找UL中最后个元素的内容
+    $("ul li:last").text(); // "list item 5"
+    //3)查找所有未选中的input元素个数
+    // :not(selector)去除所有与给定选择器匹配的元素
+    $("input:not(:checked)").size(); // 1
+    //4)查找表格的索引号为1、3、5...行的个数,索引从0开始
+    $("table tr:odd").size(); // 1
+    //5)查找表格的索引号为偶数行行的个数,索引从0开始
+    $("table tr:even").size(); // 2
+    //6)查找表格中第二行的内容，从索引号0开始
+    // :eq(index)匹配一个给定索引值的元素
+    $("table tr:eq(1)").text(); // "line2"
+    //7)查找表格中第二第三行的个数，即索引值是1和2，也就是比0大
+    $("table tr:gt(0)").size(); //2
+    //8)查找表格中第一第二行的个数，即索引值是0和1，也就是比2小
+    $("table tr:lt(2)").size(); //2
+    //9)给页面内所有标题<h1><h2><h3>加上红色背景色
+    // :header匹配如 h1, h2, h3之类的标题元素
+    $(":header").css("background-color", "red");
+</script>
+</body>
+</html>
+
+
+
+
+

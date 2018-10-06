@@ -3,9 +3,9 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <package userName="hello" extends="struts-default" namespace="/">
-        <action userName="hello" class="cn01.xyh.firstStruts.HelloAction" method="hello">
-            <result userName="success">/success.jsp</result>
+    <package name="hello" extends="struts-default" namespace="/">
+        <action name="hello" class="cn01.xyh.firstStruts.HelloAction" method="hello">
+            <result name="success">/success.jsp</result>
         </action>
     </package>
 </struts>

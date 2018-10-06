@@ -60,8 +60,8 @@ public class App2 {
         // 根据主键查询数据
         // get和load方法都能根据主键查询数据，当主键不存在时，get方法返回null而load方法报错
         // load方法支持懒加载
-        Employee employee = session.get(Employee.class, 5);
-        //Employee employee = session.load(Employee.class, 5);
+        Employee employee = session.get(Employee.class, 1);
+        //Employee employee = session.load(Employee.class, 1);
 
         System.out.println(employee);
         session.close();
@@ -71,14 +71,14 @@ public class App2 {
     @Test
     public void testUpdate1() {
         Employee emp = new Employee();
-        emp.setEmpId(5);
+        emp.setEmpId(1);
         emp.setEmpName("李四");
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         // update方法的原理是以主键创建一个新的对象覆盖之前的数据
         // 如果提供的主键不存在或没有提供主键则报错
-        // 对象要提供所有的字段值，没有提供的字段值则为空(数据库中主键为5的workDate为null)
+        // 对象要提供所有的字段值，没有提供的字段值则为空(数据库中主键为1的workDate为null)
         session.update(emp);
         transaction.commit();
         session.close();
@@ -88,7 +88,7 @@ public class App2 {
     @Test
     public void testUpdate2() {
         Employee emp = new Employee();
-        emp.setEmpId(6);
+        emp.setEmpId(2);
         emp.setEmpName("李四");
 
         Session session = sessionFactory.openSession();

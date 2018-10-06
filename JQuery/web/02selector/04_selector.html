@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        .myClass {
+            font-size: 44px;
+            color: blue
+        }
+    </style>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<div><p>John Resig</p></div>
+<div><p>George Martin</p></div>
+<div>Malcom John Sinclair</div>
+<div>J. Ohn</div>
+<p></p>
+<p></p>
+<div></div>
+<script type="text/javascript">
+    //1)查找所有包含文本"John"的div元素的个数
+    // :contains(text)匹配包含给定文本的元素,text为标签体中的内容
+    $("div:contains('John')").size(); //2
+    //2)查找所有p元素为空的元素个数
+    // :empty匹配所有不包含子元素或者文本的空元素
+    $("p:empty").size(); //2
+    //3)给所有包含p元素的div元素添加一个myClass样式
+    // :has(selector)匹配含有选择器所匹配的元素的元素
+    $("div:has('p')").addClass("myClass")
+    //4)查找所有含有子元素或者文本的p元素个数,即p为父元素
+    // :parent匹配含有子元素或者文本的元素
+    $("p:parent").size(); //2
+</script>
+</body>
+</html>
+
+
+ 
+
+

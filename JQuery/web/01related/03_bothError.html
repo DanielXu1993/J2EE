@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>DOM操作与jQuery操作对错误的处理方式的比较</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        .oneClass {
+            font-size: 44px;
+            color: red
+        }
+    </style>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<input type="text" id="usernameID" value="这就是jQuery"/>
+<div id="divID" class="oneClass">这是div中的内容</div>
+<script type="text/javascript">
+    //通过"#id"定位<input>
+    $("#usernameID").val(); // 这就是jQuery
+
+    //通过"标签名"定位<input><div>
+    $("input").val(); // 这就是jQuery
+    $("div").text(); // 这是div中的内容
+
+    //通过".样式名"定位<div>
+    $(".oneClass").text(); // 这是div中的内容
+
+    //dom错误处理和jquery错误处理
+    // js错误处理:以下代码不会发出任何的错误提示,改代码以下的飞马也不会被执行
+    // alert(document.getElementById("usernameTD").value);
+
+
+    // jQuery错误处理:会弹出undefined警告框,后面的代码仍然会执行
+    alert($("#usernameTD").val());
+    alert($("#usernameID").val())
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
