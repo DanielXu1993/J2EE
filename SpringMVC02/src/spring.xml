@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--<import resource="cn/xyh/springmvc/app14/spring_14.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app15/spring_15.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app16/spring_16.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app18/spring_18.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app19/spring_19.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app20/spring_20.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app22/spring_22.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app23/spring_23.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app24/spring_24.xml"></import>-->
+    <import resource="cn/xyh/springmvc/app25/spring_25.xml"></import>
+</beans>

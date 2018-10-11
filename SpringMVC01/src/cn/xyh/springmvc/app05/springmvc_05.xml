@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        注册Action
+        name属性表示的是请求的路径
+        class表示处理该请求的action路径
+    -->
+    <bean name="/hello.action" class="cn.xyh.springmvc.app05.HelloAction"></bean>
+</beans>

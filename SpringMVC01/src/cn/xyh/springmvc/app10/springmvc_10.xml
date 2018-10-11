@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--第一个控制器ParameterizableViewController-->
+    <!--
+        注册控制器(类似于Action,但是Action是由spring框架提供)
+        ParameterizableViewController是专门用于jsp到jsp/html转发的控制器
+        ParameterizableViewController间接的实现了Controller接口,因此默认的适配器能够适配这个控制器
+    -->
+    <bean name="/index.action" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="/WEB-INF/10_index.jsp"></property>
+    </bean>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--第二个控制器AbstractCommandController-->
+    <!--注册Action-->
+    <bean name="/add.action" class="cn.xyh.springmvc.app10.EmpAction"></bean>
+</beans>

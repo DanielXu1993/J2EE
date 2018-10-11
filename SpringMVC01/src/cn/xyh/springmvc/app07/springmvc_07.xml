@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--注册Action,必须配置-->
+    <bean name="/hello.action" class="cn.xyh.springmvc.app07.HelloAction"></bean>
+    <!--映射器配置可省-->
+    <!--适配器配置可省-->
+    <!--
+        如果Action中返回的是逻辑名称,视图解析器就必须要配置
+        如果Action中返回的是真实名称,视图解析器可以省略
+    -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 前缀 + 视图逻辑名 + 后缀 = 真实路径 -->
+        <property name="prefix" value="/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>

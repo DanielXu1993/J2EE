@@ -26,10 +26,11 @@
         var username = $(":text").val();
         var password = $(":password").val();
         var url = "${pageContext.request.contextPath}/userServlet?time=" + new Date().getTime();
-        var sendData = {
-            "username": username,
-            "password": password
-        };
+        // var sendData = {
+        //     "username": username,
+        //     "password": password
+        // };
+        var sendData = $("form").serialize();// 将form标签中含有name属性的值封装成json格式的对象
         $.post(url, sendData, function (backData) {
             // backData:如果服务器返回的是html或者字符串,则不需要进行解析
             var $img = $("<img src='../" + backData + "' width='14px' height='14px' />");

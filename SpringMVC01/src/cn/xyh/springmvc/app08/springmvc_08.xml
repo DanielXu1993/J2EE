@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--注册Action
+    <bean name="/add.action" class="cn.xyh.springmvc.app08.UserAction"></bean>
+    <bean name="/update.action" class="cn.xyh.springmvc.app08.UserAction"></bean>
+    <bean name="/delete.action" class="cn.xyh.springmvc.app08.UserAction"></bean>
+    <bean name="/find.action" class="cn.xyh.springmvc.app08.UserAction"></bean>
+    -->
+    <!--
+        默认的映射器为BeanNameUrlHandlerMapping,它将bean的name属性值一一映射为URL路径
+        当多个请求对应一个action时可以使用SimpleUrlHandlerMapping
+    -->
+    <!--注册Action-->
+    <bean id="userAction" class="cn.xyh.springmvc.app08.UserAction"></bean>
+    <!--注册映射器,多个请求映射到同一个Action-->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <!--key表示请求的路径-->
+                <prop key="/add.action">userAction</prop>
+                <prop key="/update.action">userAction</prop>
+                <prop key="/delete.action">userAction</prop>
+                <prop key="/find.action">userAction</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 前缀 + 视图逻辑名 + 后缀 = 真实路径 -->
+        <property name="prefix" value="/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>

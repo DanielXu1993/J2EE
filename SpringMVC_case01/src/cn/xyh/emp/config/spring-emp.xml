@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--注册dao-->
+    <bean id="empDao" class="cn.xyh.emp.dao.EmpDao"></bean>
+    <!--注册service-->
+    <bean id="empService" class="cn.xyh.emp.service.EmpService">
+        <property name="empDao" ref="empDao"></property>
+    </bean>
+    <!--注册action-->
+    <bean name="/add.action" class="cn.xyh.emp.action.EmpAction">
+        <property name="empService" ref="empService"></property>
+    </bean>
+    <!--注册视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>

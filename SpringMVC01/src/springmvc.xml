@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--按照循序加载,如果文件中bean的name属性存在相同的情况则后面的覆盖前面的-->
+    <!--<import resource="cn/xyh/springmvc/app05/springmvc_05.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app07/springmvc_07.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app08/springmvc_08.xml"></import>-->
+    <!--<import resource="cn/xyh/springmvc/app09/springmvc_09.xml"></import>-->
+    <import resource="cn/xyh/springmvc/app10/springmvc_10.xml"></import>
+</beans>
