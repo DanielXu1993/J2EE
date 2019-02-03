@@ -25,7 +25,7 @@ public class Demo2 implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
-                         FilterChain filterChain) throws IOException, ServletException {
+        FilterChain filterChain) throws IOException, ServletException {
         System.out.println("第二个过滤器");
         filterChain.doFilter(servletRequest, servletResponse);
         System.out.println("第二个过滤器执行完毕");

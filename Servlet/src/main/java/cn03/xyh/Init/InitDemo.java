@@ -12,10 +12,10 @@ public class InitDemo extends HttpServlet {
      * 该方法是servlet的生命周期方法，一定会被Tomcat服务器调用
      * 如果要编写初始化的逻辑，不需要覆盖有参的init方法
      */
-//    @Override
-//    public void init(ServletConfig config) throws ServletException {
-//        super.init(config);
-//    }
+    //    @Override
+    //    public void init(ServletConfig config) throws ServletException {
+    //        super.init(config);
+    //    }
 
 
     /**

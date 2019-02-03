@@ -8,7 +8,6 @@
 <%
 	SimpleDateFormat sdf = new SimpleDateFormat();
 	String current = sdf.format(new Date());
-
 	out.write("当前时间为: " + current);
 %>
 
